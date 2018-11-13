@@ -6,7 +6,7 @@ services:
      image: httpd:alpine
      restart: unless-stopped
      volumes:
-       - ${HTTPD_CONTENT}:/var/www/html
+       - ${HTTPD_CONTENT}:/usr/local/apache2/htdocs
      environment:
        VIRTUAL_HOST: ${DOMAINS}
        LETSENCRYPT_HOST: ${DOMAINS}
